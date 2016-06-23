@@ -247,7 +247,7 @@ out:
 	return;
 }
 
-static void bricked_hotplug_suspend(void)
+void bricked_hotplug_suspend(void)
 {
 	int cpu;
 
@@ -276,7 +276,7 @@ static void bricked_hotplug_suspend(void)
 			cpu_online(0), cpu_online(1), cpu_online(2), cpu_online(3));
 }
 
-static void __ref bricked_hotplug_resume(void)
+void __ref bricked_hotplug_resume(void)
 {
 	int cpu, required_reschedule = 0, required_wakeup = 0;
 
